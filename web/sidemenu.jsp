@@ -1,3 +1,15 @@
+<%
+String user = (String)    
+session.getAttribute("usuario");
+try{
+if(user.equals("")){
+    response.sendRedirect("login.jsp");
+}}catch (NullPointerException e) {
+            response.sendRedirect("login.jsp");
+        }
+    %>
+
+
 <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
         <div class="navbar nav_title" style="border: 0;">
@@ -13,7 +25,9 @@
             </div>
             <div class="profile_info">
                 <span>Bem vindo</span>
-                <h2>Jeison</h2>
+                <h2><%
+                    out.print(session.getAttribute("usuario"));
+                    %></h2>
             </div>
             <div class="clearfix"></div>
         </div>

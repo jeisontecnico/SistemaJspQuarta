@@ -2,6 +2,9 @@
   <head>
  <%@include file="header.jsp"%>
   </head>
+  <%
+  session.setAttribute("usuario", "");
+  %>
 
   <body class="login">
     <div>
