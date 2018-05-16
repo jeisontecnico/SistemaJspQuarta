@@ -4,15 +4,17 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/jeiso/Documents/NetBeansProjects/SistemaJspQuarta/web/topmenu.jsp</file>
+            <file>file:/C:/Users/jeiso/Documents/NetBeansProjects/SistemaJspQuarta/src/java/beans/Calculo.java</file>
+            <file>file:/C:/Users/jeiso/Documents/NetBeansProjects/SistemaJspQuarta/web/content.jsp</file>
+            <file>file:/C:/Users/jeiso/Documents/NetBeansProjects/SistemaJspQuarta/web/login.jsp</file>
+            <file>file:/C:/Users/jeiso/Documents/NetBeansProjects/SistemaJspQuarta/src/java/Servlets/Logar.java</file>
+            <file>file:/C:/Users/jeiso/Documents/NetBeansProjects/SistemaJspQuarta/web/css/custom.min.css</file>
+            <file>file:/C:/Users/jeiso/Documents/NetBeansProjects/SistemaJspQuarta/web/WEB-INF/web.xml</file>
             <file>file:/C:/Users/jeiso/Documents/NetBeansProjects/SistemaJspQuarta/web/sidemenu.jsp</file>
             <file>file:/C:/Users/jeiso/Documents/NetBeansProjects/SistemaJspQuarta/web/modelo.jsp</file>
-            <file>file:/C:/Users/jeiso/Documents/NetBeansProjects/SistemaJspQuarta/web/content.jsp</file>
             <file>file:/C:/Users/jeiso/Documents/NetBeansProjects/SistemaJspQuarta/web/view/v_cliente.jsp</file>
-            <file>file:/C:/Users/jeiso/Documents/NetBeansProjects/SistemaJspQuarta/web/index.html</file>
-            <file>file:/C:/Users/jeiso/Documents/NetBeansProjects/SistemaJspQuarta/web/login.jsp</file>
             <file>file:/C:/Users/jeiso/Documents/NetBeansProjects/SistemaJspQuarta/web/header.jsp</file>
             <file>file:/C:/Users/jeiso/Documents/NetBeansProjects/SistemaJspQuarta/web/cliente.jsp</file>
-            <file>file:/C:/Users/jeiso/Documents/NetBeansProjects/SistemaJspQuarta/src/java/Servlets/Logar.java</file>
             <file>file:/C:/Users/jeiso/Documents/NetBeansProjects/SistemaJspQuarta/web/footer.jsp</file>
         </group>
     </open-files>

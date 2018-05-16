@@ -59,10 +59,12 @@ public class Logar extends HttpServlet {
         String login = request.getParameter("user");
         String senha = request.getParameter("password");
         HttpSession session = request.getSession();
+        
         try {
             if (login.equals("jeison") && senha.equals("1234")) {
                 response.sendRedirect("cliente.jsp");
                 session.setAttribute("usuario", login);
+                session.setMaxInactiveInterval(60*1);
             } else {
                 response.sendRedirect("login.jsp");
                 session.setAttribute("usuario", "");
@@ -71,6 +73,7 @@ public class Logar extends HttpServlet {
         } catch (NullPointerException e) {
             response.sendRedirect("login.jsp");
         }
+        
     }
 
     /**

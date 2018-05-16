@@ -43,7 +43,14 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                      Add content to the page ...
+                      <jsp:useBean id="dollar" class="beans.Calculo" type="beans.Calculo" scope="page"/>
+                      Cadastro do cliente...
+                      R$ 100,00 = U$
+                      <%= dollar.ConverterDolar(100.00) %>
+                      
+                      <br>
+                      R$ 100,00 = Euros
+                      <%= dollar.ConverterEuro(100.00) %>
                   </div>
                 </div>
               </div>
