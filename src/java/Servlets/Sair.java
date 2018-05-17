@@ -6,6 +6,7 @@
 package Servlets;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,10 +16,10 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author jeiso
+ * @author kleyton
  */
-@WebServlet(name = "Logar", urlPatterns = {"/Logar"})
-public class Logar extends HttpServlet {
+@WebServlet(name = "Sair", urlPatterns = {"/Sair"})
+public class Sair extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -29,6 +30,17 @@ public class Logar extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            HttpSession session = request.getSession();
+            session.setAttribute("usuario", "");
+            response.sendRedirect("login.jsp");
+        }
+    }
+
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -41,7 +53,7 @@ public class Logar extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        doPost(request, response);
+        processRequest(request, response);
     }
 
     /**
@@ -55,25 +67,7 @@ public class Logar extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-        String login = request.getParameter("user");
-        String senha = request.getParameter("password");
-        HttpSession session = request.getSession();
-        
-        try {
-            if (login.equals("jeison") && senha.equals("1234")) {
-                response.sendRedirect("perfil.jsp");
-                session.setAttribute("usuario", login);
-               
-            } else {
-                response.sendRedirect("login.jsp");
-                session.setAttribute("usuario", "");
-            }
-
-        } catch (NullPointerException e) {
-            response.sendRedirect("login.jsp");
-        }
-        
+        processRequest(request, response);
     }
 
     /**

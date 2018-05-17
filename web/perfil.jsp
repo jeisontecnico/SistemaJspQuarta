@@ -11,7 +11,7 @@
             <div class="main_container">
                 <%@include file="sidemenu.jsp"%>
                 <%@include file="topmenu.jsp"%>
-                <%@include file="/view/v_cliente.jsp"%>
+                <%@include file="/view/v_perfil.jsp"%>
                 <%@include file="footer.jsp"%>
     </body>
 </html>
