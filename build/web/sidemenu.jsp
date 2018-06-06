@@ -1,13 +1,14 @@
 <%
-    session.setAttribute("usuario", "");
-    String user = (String) session.getAttribute("usuario");
+    
+    String user; 
     try {
-        if (user.equals("")) {
-            session.setAttribute("usuario", "Usuario");
-// response.sendRedirect("login.jsp");
+        user = (String) session.getAttribute("usuario");
+       if (user.equals("")) {
+            response.sendRedirect("login.jsp");
         }
     } catch (NullPointerException e) {
-        //response.sendRedirect("login.jsp");
+        response.sendRedirect("login.jsp");
+        user = "";
     }
 %>
 
@@ -46,10 +47,15 @@
                 <ul class="nav side-menu">
                     <li><a><i class="fa fa-bars"></i>Categorias de produtos<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="placavideo.jsp">Placas de Video</a></li>
-                            <li><a href="processadores.jsp">Processadores</a></li>
+                            
+                            <li><a href="produto.jsp">Produtos</a></li>
+                            <li><a href="cadastro_produto.jsp">Cadastro de Produtos</a></li>
+                            <li><a href="clientes.jsp">Cadastro de Clientes</a></li>
+                            <li><a href="cliente_lista.jsp">Lista de Clientes</a></li>
+                            
                         </ul>
                     </li>
+                    <li><a href="./Sair"><i class="fa fa-power-off"></i> SAIR </a>
 
                     <%--<li><a><i class="fa fa-edit"></i> Cadastro <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">

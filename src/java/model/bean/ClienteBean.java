@@ -1,6 +1,6 @@
 package model.bean;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class ClienteBean {
  
@@ -8,12 +8,13 @@ public class ClienteBean {
     String nome;
     String sobrenome;
     String apelido;
-    Date nascimento;
+    String nascimento;
 
-    public ClienteBean(String nome, String sobrenome, String apelido) {
+    public ClienteBean(String nome, String sobrenome, String apelido, String nascimento) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.apelido = apelido;
+        this.nascimento = nascimento;
     }
 
     public String getNome() {
@@ -40,11 +41,11 @@ public class ClienteBean {
         this.apelido = apelido;
     }
 
-    public Date getNascimento() {
+    public String getNascimento() {
         return nascimento;
     }
 
-    public void setNascimento(Date nascimento) {
+    public void setNascimento(String nascimento) {
         this.nascimento = nascimento;
     }
     

@@ -8,9 +8,9 @@ import java.util.logging.Logger;
 
 public class ConnectionFactory {
 
-    private final String url_conexao = "jdbc:mysql://localhost/dbloja";
+    private final String url_conexao = "jdbc:mysql://localhost/system_jsp";
     private final String usuario = "root";
-    private final String senha = "Uninovedb";
+    private final String senha = "";
     private Connection conexao = null;
 
     public Connection getConnection() {
