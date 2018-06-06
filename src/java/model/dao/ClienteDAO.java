@@ -27,7 +27,7 @@ public class ClienteDAO {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 ClienteBean clientBean = new ClienteBean(rs.getString("nome"), rs.getString("sobrenome"), rs.getString("apelido"), 
-                rs.getString("nascimento"));
+                rs.getString("data_nascimento"));
                 listCliente.add(clientBean);
             }
             rs.close();

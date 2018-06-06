@@ -36,10 +36,10 @@ public class Produto extends HttpServlet {
             if (funcao.equals("cadastrar")) {
 
                 String nome = request.getParameter("nome");
-                String sobrenome = request.getParameter("sobrenome");
-                String apelido = request.getParameter("apelido");
-                produto.cadastrar(new ProdutoBean(1,request.getParameter("nome"), request.getParameter("descricao")));
-                response.sendRedirect("cliente.jsp");
+                String descricao = request.getParameter("descricao");
+                int preco = Integer.valueOf(request.getParameter("preco"));
+                produto.cadastrar(new ProdutoBean(preco, nome, descricao));
+                response.sendRedirect("produto.jsp");
             }
 
         }

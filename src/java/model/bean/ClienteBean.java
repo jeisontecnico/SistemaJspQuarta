@@ -10,6 +10,11 @@ public class ClienteBean {
     String apelido;
     String nascimento;
 
+    public ClienteBean() {
+    }
+    
+    
+
     public ClienteBean(String nome, String sobrenome, String apelido, String nascimento) {
         this.nome = nome;
         this.sobrenome = sobrenome;

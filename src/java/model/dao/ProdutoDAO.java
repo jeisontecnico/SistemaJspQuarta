@@ -31,7 +31,7 @@ public class ProdutoDAO {
 
     public List<ProdutoBean> buscarTodos() {
         List<ProdutoBean> listProduto = new ArrayList<>();
-        String sql = "select * from produto";
+        String sql = "select * from produtos";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
@@ -49,7 +49,7 @@ public class ProdutoDAO {
     }
 
     public void cadastrar(ProdutoBean produto) {
-        String sql = "insert into produto(nome,sobrenome,apelido) values(?,?,?)";
+        String sql = "insert into produtos(preco,nome,descricao) values(?,?,?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, produto.getPreco());
