@@ -14,7 +14,7 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-            <form action="Logar" method="post">
+            <form action="./Logar" method="post">
               <h1>Login do Sistema</h1>
               <div>
                 <input type="text" name="user" id="user" class="form-control" placeholder="Usuario" required="" />
@@ -24,15 +24,13 @@
               </div>
               <div>
                 <input type="submit" value="entrar">;
-                <a class="reset_pass" href="#">Esqueceu a senha?</a>
+                
               </div>
 
               <div class="clearfix"></div>
 
               <div class="separator">
-                <p class="change_link">Novo no site?
-                  <a href="#signup" class="to_register"> Criar a conta </a>
-                </p>
+               
 
                 <div class="clearfix"></div>
                 <br />

@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import model.dao.UsuarioDAO;
 
 /**
  *
@@ -55,14 +56,16 @@ public class Logar extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        UsuarioDAO user = new UsuarioDAO();
 
         String login = request.getParameter("user");
         String senha = request.getParameter("password");
         HttpSession session = request.getSession();
         
         try {
-            if (login.equals("jeison") && senha.equals("1234")) {
-                response.sendRedirect("perfil.jsp");
+            if (user.autenticar(login, senha)) {
+                response.sendRedirect("cliente_lista.jsp");
                 session.setAttribute("usuario", login);
                
             } else {
