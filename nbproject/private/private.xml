@@ -3,7 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/jeiso/Desktop/SistemaJspQuarta-master/SistemaJspQuarta-master/src/java/model/factory/ConnectionFactory.java</file>
+            <file>file:/C:/Users/jeiso/Documents/GitHub/SistemaJspQuarta/web/sidemenu.jsp</file>
+            <file>file:/C:/Users/jeiso/Documents/GitHub/SistemaJspQuarta/src/java/beans/ClienteLista.java</file>
+            <file>file:/C:/Users/jeiso/Documents/GitHub/SistemaJspQuarta/src/java/model/dao/ClienteDAO.java</file>
+            <file>file:/C:/Users/jeiso/Documents/GitHub/SistemaJspQuarta/src/java/model/dao/UsuarioDAO.java</file>
+            <file>file:/C:/Users/jeiso/Documents/GitHub/SistemaJspQuarta/web/login.jsp</file>
+            <file>file:/C:/Users/jeiso/Documents/GitHub/SistemaJspQuarta/web/view/v_cliente_lista.jsp</file>
+            <file>file:/C:/Users/jeiso/Documents/GitHub/SistemaJspQuarta/web/script.jsp</file>
+            <file>file:/C:/Users/jeiso/Documents/GitHub/SistemaJspQuarta/web/header.jsp</file>
+            <file>file:/C:/Users/jeiso/Documents/GitHub/SistemaJspQuarta/web/produto.jsp</file>
+            <file>file:/C:/Users/jeiso/Documents/GitHub/SistemaJspQuarta/src/java/model/bean/ClienteBean.java</file>
+            <file>file:/C:/Users/jeiso/Documents/GitHub/SistemaJspQuarta/web/topmenu.jsp</file>
         </group>
     </open-files>
 </project-private>

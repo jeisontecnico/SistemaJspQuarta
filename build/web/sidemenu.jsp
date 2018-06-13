@@ -42,51 +42,28 @@
         <br />
 
         <!-- sidebar menu -->
+        
         <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
             <div class="menu_section">
+                <h3>Menu</h3>
                 <ul class="nav side-menu">
-                    <li><a><i class="fa fa-bars"></i>Categorias de produtos<span class="fa fa-chevron-down"></span></a>
+                    <li><a><i class="fa fa-edit"></i>Cadastro<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            
-                            <li><a href="produto.jsp">Produtos</a></li>
                             <li><a href="cadastro_produto.jsp">Cadastro de Produtos</a></li>
                             <li><a href="clientes.jsp">Cadastro de Clientes</a></li>
-                            <li><a href="cliente_lista.jsp">Lista de Clientes</a></li>
-                            
-                        </ul>
+                            </ul>
+                        
                     </li>
-                    <li><a href="./Sair"><i class="fa fa-power-off"></i> SAIR </a>
-
-                    <%--<li><a><i class="fa fa-edit"></i> Cadastro <span class="fa fa-chevron-down"></span></a>
+                    <li><a><i class="fa fa-bars"></i>Listas<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="perfil.jsp">Cliente</a></li>
-                            <li><a href="produto.jsp">Produtos</a></li>
-                            <li><a href="carrinho.jsp">Carrinho</a></li>
-                                                
+                            <li><a href="cliente_lista.jsp">Lista de Clientes</a></li>
+                            <li><a href="produto.jsp">Lista de Produtos</a></li>
                         </ul>
-                        <li><a href="./Sair"><i class="fa fa-power-off"></i>SAIR</a></li>
+                        
                     </li>
-                    --%>
             </div>
 
         </div>
-        <!-- /sidebar menu -->
-
-        <!-- /menu footer buttons -->
-        <%-- <div class="sidebar-footer hidden-small">
-            <a data-toggle="tooltip" data-placement="top" title="Settings">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="Lock">
-                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
-                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-            </a>
-        </div>--%>
-        <!-- /menu footer buttons -->
+  
     </div>
 </div>

@@ -15,3 +15,6 @@
 
     <!-- Custom Theme Style -->
     <link href="./css/custom.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="jquery.dataTables.min.css"/>
+ 

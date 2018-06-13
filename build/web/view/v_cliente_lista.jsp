@@ -48,7 +48,11 @@
                         <br>
 
                         <!-- DATATABLES -->
-                        <table id="example" class="display" style="width:100%">
+                         
+                        
+                        
+                        
+                        <table id="mytable" class="display" style="width:100%">
                             <thead>
                                 <tr>
                                     <th>Nome</th>
@@ -99,12 +103,4 @@
 <!-- /page content -->
 
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#example').dataTable({
-                "language": {
-                    "url": "dataTables.Portuguese-Brasil.lang"
-                }
-            });
-        });
-    </script>
+   
