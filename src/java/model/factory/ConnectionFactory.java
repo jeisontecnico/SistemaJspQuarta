@@ -8,9 +8,9 @@ import java.util.logging.Logger;
 
 public class ConnectionFactory {
 
-    private final String url_conexao = "jdbc:mysql://dbteste.cwhkf8ctsxht.sa-east-1.rds.amazonaws.com/system_jsp";
-    private final String usuario = "root";
-    private final String senha = "Teste123456";
+    private final String url_conexao = "jdbc:mysql://localhost/system_jsp";
+    private final String usuario = "usuario";
+    private final String senha = "";
     private Connection conexao = null;
 
     public Connection getConnection() {
