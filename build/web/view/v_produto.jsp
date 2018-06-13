@@ -26,4 +26,4 @@
                 <div class="x_panel">
                     <div class="x_title">
                         <h2>Lista de produtos <small> Todos produtos </small></h2>
-<%@include file="/view/v_todos.jsp" %>
+<%--<%@include file="/view/v_todos.jsp" %>--%>
