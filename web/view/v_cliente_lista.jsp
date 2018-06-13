@@ -34,6 +34,8 @@
                                     <th>Sobrenome</th>
                                     <th>Data de Nascimento</th>
                                     <th>Apelido</th>
+                                    <th></th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <jsp:useBean id="clientes" class="beans.ClienteLista" type="beans.ClienteLista" scope="page"/>
@@ -49,18 +51,19 @@
                                 <td><%=cliente.getSobrenome()%></td>
                                 <td><%=cliente.getNascimento()%></td>
                                 <td><%=cliente.getApelido()%></td>
+                                <td><input type="button" name="edit" value="Editar" style="background-color:green;font-weight:bold;color:white;" onclick="editClient(cliente.getId());"></td>
+                                <td><input type="button" name="delete" value="Deletar" style="background-color:red;font-weight:bold;color:white;" onclick="deleteClient(cliente.getId());"></td>
                             </tr>
                             <% } %>
                         </tbody>
-                            
-                            
-                          
                             <tfoot>
                                 <tr>
                                     <th>Nome</th>
                                     <th>Sobrenome</th>
                                     <th>Data de Nascimento</th>
                                     <th>Apelido</th>
+                                    <th></th>
+                                    <th></th>   
                                 </tr>
                             </tfoot>
                         </table>

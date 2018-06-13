@@ -54,6 +54,37 @@ public class ClienteDAO {
             Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    public void deletar(ClienteBean cliente) {
+        String sql = "delete * from cliente where id =?";
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, cliente.getNome());
+            ps.setString(2, cliente.getSobrenome());
+            ps.setString(3, cliente.getApelido());
+            ps.setString(4, cliente.getNascimento());
+            ps.setInt(5, cliente.getId());
+            ps.executeUpdate();
+            ps.close();
+            con.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void update(ClienteBean cliente) {
+        String sql = "update cliente SET nome=?, sobrenome=?, apelido=?, data_nascimento=? where id =?";
+        
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, cliente.getId());
+            ps.executeUpdate();
+            ps.close();
+            con.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 
     // VALIDAR LOGIN DO USUARIO
     public boolean autenticar(String nome, String senha) {

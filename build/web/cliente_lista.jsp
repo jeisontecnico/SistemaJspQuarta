@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <%@include file="header.jsp"%>    
+         
     </head>
 
     <body class="nav-md">
