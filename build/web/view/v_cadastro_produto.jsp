@@ -57,13 +57,13 @@
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Descrição <span class="required">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" id="sobrenome" name="descricao" required="required" class="form-control col-md-7 col-xs-12">
+                                    <input type="text" id="descricao" name="descricao" required="required" class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Preço </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input id="apelido" class="form-control col-md-7 col-xs-12" type="text" name="preco">
+                                    <input id="preco" class="form-control col-md-7 col-xs-12" type="text" name="preco">
                                 </div>
                             </div>
                             

@@ -50,7 +50,7 @@
                             <li><a href="cadastro_produto.jsp">Cadastro de Produtos</a></li>
                             <li><a href="clientes.jsp">Cadastro de Clientes</a></li>
                             <li><a href="cliente_lista.jsp">Lista de Clientes</a></li>
-                            <li><a href="produto.jsp">Lista de Produtos</a></li>
+                            
                         </ul>
 
                 </ul>

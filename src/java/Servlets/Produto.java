@@ -3,12 +3,15 @@ package Servlets;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.bean.ProdutoBean;
+import model.dao.ClienteDAO;
 import model.dao.ProdutoDAO;
 
 
@@ -39,9 +42,11 @@ public class Produto extends HttpServlet {
                 String descricao = request.getParameter("descricao");
                 int preco = Integer.valueOf(request.getParameter("preco"));
                 produto.cadastrar(new ProdutoBean(preco, nome, descricao));
-                response.sendRedirect("produto.jsp");
+                response.sendRedirect("cadastro_produto.jsp");
             }
 
+        } catch (Exception ex){
+            Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
