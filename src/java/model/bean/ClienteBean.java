@@ -4,17 +4,26 @@ import java.sql.Date;
 
 public class ClienteBean {
  
-    int id;
+    String id;
     String nome;
     String sobrenome;
     String apelido;
     String nascimento;
 
     public ClienteBean() {
+       
     }
     
     
 
+    public ClienteBean(String id, String nome, String sobrenome, String apelido, String nascimento) {
+        this.id = id;
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.apelido = apelido;
+        this.nascimento = nascimento;
+    }
+    
     public ClienteBean(String nome, String sobrenome, String apelido, String nascimento) {
         this.nome = nome;
         this.sobrenome = sobrenome;
@@ -22,11 +31,11 @@ public class ClienteBean {
         this.nascimento = nascimento;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
     
