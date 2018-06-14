@@ -47,7 +47,6 @@
                                     cliente = clientes.getClientes().get(i);
                             %>
                             <tr>
-                                <td><%=cliente.getId()%></td>
                                 <td><%=cliente.getNome() %></td>
                                 <td><%=cliente.getSobrenome()%></td>
                                 <td><%=cliente.getNascimento()%></td>
