@@ -1,9 +1,9 @@
 <%
-    
-    String user; 
+
+    String user;
     try {
         user = (String) session.getAttribute("usuario");
-       if (user.equals("")) {
+        if (user.equals("")) {
             response.sendRedirect("login.jsp");
         }
     } catch (NullPointerException e) {
@@ -42,27 +42,23 @@
         <br />
 
         <!-- sidebar menu -->
-        
-        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-            <div class="menu_section">
+
+       
                 <h3>Menu</h3>
-                <ul class="nav side-menu">
-                    <li><a><i class="fa fa-edit"></i>Cadastro e Lista<span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
+                
+                        <ul class="">
                             <li><a href="cadastro_produto.jsp">Cadastro de Produtos</a></li>
                             <li><a href="clientes.jsp">Cadastro de Clientes</a></li>
-                                                        <li><a href="cliente_lista.jsp">Lista de Clientes</a></li>
+                            <li><a href="cliente_lista.jsp">Lista de Clientes</a></li>
                             <li><a href="produto.jsp">Lista de Produtos</a></li>
-                            </ul>
-
                         </ul>
-                    </li>
-                    
-                        
-                    
-            </div>
 
-        </div>
-  
+                </ul>
+                </li>
+
+
+
+          
+
     </div>
 </div>

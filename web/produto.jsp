@@ -11,6 +11,6 @@
           <%@include file="topmenu.jsp" %>
           <%@include file="/view/v_produto.jsp" %>
           <%@include file="footer.jsp" %>
-          
+          <%@include file="script.jsp"%>
       </body>
 </html>
