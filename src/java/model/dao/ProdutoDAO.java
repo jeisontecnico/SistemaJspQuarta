@@ -36,8 +36,8 @@ public class ProdutoDAO {
             PreparedStatement ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                ProdutoBean clientBean = new ProdutoBean(rs.getInt("preco"), rs.getString("nome"), rs.getString("descricao"));
-                listProduto.add(clientBean);
+                ProdutoBean produto = new ProdutoBean(rs.getInt("id"), rs.getInt("preco"), rs.getString("nome"), rs.getString("descricao"));
+                listProduto.add(produto);
             }
             rs.close();
             ps.close();
@@ -60,6 +60,37 @@ public class ProdutoDAO {
             con.close();
         } catch (SQLException ex) {
             Logger.getLogger(ProdutoDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void deletar(String id) {
+        String sql = "DELETE FROM produtos WHERE id =?";
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, id);
+           
+            ps.executeUpdate();
+            ps.close();
+            con.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void update(ProdutoBean produto) {
+        String sql = "update produtos SET nome=?, descricao=?, preco=? where id =?";
+        
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, produto.getNome());
+            ps.setString(2, produto.getDescricao());
+            ps.setInt(3, produto.getPreco());
+            ps.setInt(3, produto.getId());
+            ps.executeUpdate();
+            ps.close();
+            con.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

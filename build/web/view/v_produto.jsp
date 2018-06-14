@@ -49,8 +49,8 @@
                                 <td><%=produto.getNome() %></td>
                                 <td><%=produto.getPreco()%></td>
                                 <td><%=produto.getDescricao()%></td>
-                                <td><input type="button" name="edit" value="Editar" style="background-color:green;font-weight:bold;color:white;" onclick=""></td>
-                                <td><input type="button" name="delete" value="Deletar" style="background-color:red;font-weight:bold;color:white;" onclick=""></td>
+                                 <td><a href='Produto?acao=delete&id=<%=produto.getId()%>' style="background-color:green;padding: 3px;font-weight:bold;color:white;" >Deletar</a></td>
+                                <td><a href='Produto?acao=edit&id=<%=produto.getId()%>' style="background-color:red;padding: 3px;font-weight:bold;color:white;">Editar</a></td>
                             </tr>
                             <% } %>
                         </tbody>
