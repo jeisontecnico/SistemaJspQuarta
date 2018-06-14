@@ -26,7 +26,7 @@ public class ClienteDAO {
             PreparedStatement ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                ClienteBean clientBean = new ClienteBean(rs.getString("nome"), rs.getString("sobrenome"), rs.getString("apelido"), 
+                ClienteBean clientBean = new ClienteBean(String.valueOf(rs.getInt("id")) ,rs.getString("nome"), rs.getString("sobrenome"), rs.getString("apelido"), 
                 rs.getString("data_nascimento"));
                 listCliente.add(clientBean);
             }
@@ -55,15 +55,12 @@ public class ClienteDAO {
         }
     }
     
-    public void deletar(ClienteBean cliente) {
-        String sql = "delete * from cliente where id =?";
+    public void deletar(String id) {
+        String sql = "DELETE FROM cliente WHERE id =?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
-            ps.setString(1, cliente.getNome());
-            ps.setString(2, cliente.getSobrenome());
-            ps.setString(3, cliente.getApelido());
-            ps.setString(4, cliente.getNascimento());
-            ps.setInt(5, cliente.getId());
+            ps.setString(1, id);
+           
             ps.executeUpdate();
             ps.close();
             con.close();
@@ -77,7 +74,7 @@ public class ClienteDAO {
         
         try {
             PreparedStatement ps = con.prepareStatement(sql);
-            ps.setInt(1, cliente.getId());
+            ps.setString(1, cliente.getId());
             ps.executeUpdate();
             ps.close();
             con.close();

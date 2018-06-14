@@ -23,20 +23,3 @@
 });
 });
     </script>
-    
-    <script language="javascript">
-            function editClient(Client){
-                var f=document.form;
-                f.method="put";
-                f.action='edit.jsp?id='+id;
-                f.submit();
-            }
-            
-            function deleteClient(id) {
-                var f = document.form;
-                f.method="delete";
-                f.action='delete.jsp?=id' + id;
-                f.submit();
-            }
-        </script>
-    

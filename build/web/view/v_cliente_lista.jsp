@@ -47,12 +47,13 @@
                                     cliente = clientes.getClientes().get(i);
                             %>
                             <tr>
+                                <td><%=cliente.getId()%></td>
                                 <td><%=cliente.getNome() %></td>
                                 <td><%=cliente.getSobrenome()%></td>
                                 <td><%=cliente.getNascimento()%></td>
                                 <td><%=cliente.getApelido()%></td>
-                                <td><input type="button" name="edit" value="Editar" style="background-color:green;font-weight:bold;color:white;" onclick="editClient(cliente.getId());"></td>
-                                <td><input type="button" name="delete" value="Deletar" style="background-color:red;font-weight:bold;color:white;" onclick="deleteClient(cliente.getId());"></td>
+                                <td><a href='Cliente?acao=delete&id=<%=cliente.getId()%>' style="background-color:green;padding: 3px;font-weight:bold;color:white;" >Deletar</a></td>
+                                <td><a href='Cliente?acao=edit&id=<%=cliente.getId()%>' style="background-color:red;padding: 3px;font-weight:bold;color:white;">Editar</a></td>
                             </tr>
                             <% } %>
                         </tbody>

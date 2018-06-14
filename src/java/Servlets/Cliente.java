@@ -65,7 +65,26 @@ public class Cliente extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
+        String acao = request.getParameter("acao");
+        String id = request.getParameter("id");
+        
+        switch(acao) {
+            
+            case "delete":
+                
+                ClienteDAO cliente = new ClienteDAO();
+                cliente.deletar(id);
+                response.sendRedirect("cliente_lista.jsp");
+                break;
+            case "edit":
+                break;
+            default:
+                processRequest(request, response);
+                break;
+        }
+        
+        
     }
 
     /**
